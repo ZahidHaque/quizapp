@@ -17,7 +17,7 @@ public class QuestionController {
 
     @GetMapping("allQuestions")
     public ResponseEntity<List<Question>> getAllQuestion(){
-        return new ResponseEntity<>(questionService.getAllQuestions(), HttpStatus.OK);
+        return questionService.getAllQuestions();
     }
 
     @GetMapping("category/{difficultylevel}")
@@ -26,6 +26,7 @@ public class QuestionController {
     }
 
     /*
+    愛里さんがよろしくと伝えていました。
     */
 
     @PostMapping("add")
@@ -39,4 +40,6 @@ public class QuestionController {
         questionService.deleteById(id);
         return id+"th Question deleted";
     }
+
+
 }
