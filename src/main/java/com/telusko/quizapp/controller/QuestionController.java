@@ -25,10 +25,6 @@ public class QuestionController {
         return questionService.getQuestionsByDifficultylevel(difficultylevel);
     }
 
-    /*
-    愛里さんがよろしくと伝えていました。
-    */
-
     @PostMapping("add")
     public String addQuestion(@RequestBody Question question){
         questionService.addQuestion(question);
